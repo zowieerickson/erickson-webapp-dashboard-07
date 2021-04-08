@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body>
+  <body class="grid-container">
 
     <!------------------ Header ----------------->
     <header>
@@ -127,78 +127,107 @@
         </div>
       </div>
 
-      <!-- new member -->
-      <section class="members"> 
-        <h3>New Members</h3>
+      <!------------------ Social ROW ----------------->
+      <div class="social">
+        <!-- new member -->
+        <section class="members"> 
+          <h3>New Members</h3>
 
-        <div class="members-container">
-          <img src="images/member-1.jpg" alt="Woman with blonde hair">
-          <div>
-            <p>Victoria Chambers</p>
-            <a href="mailto:victoria.chambers80@example.com">victoria.chambers80@example.com</a>
+          <div class="members-container">
+            <img src="images/member-1.jpg" alt="Woman with blonde hair">
+            <div>
+              <p>Victoria Chambers</p>
+              <a href="mailto:victoria.chambers80@example.com">victoria.chambers80@example.com</a>
+            </div>
+            <p>10/15/20</p>
           </div>
-          <p>10/15/20</p>
-        </div>
-        <div class="members-container">
-          <img src="images/member-2.jpg" alt="Man with short brown hair">
-          <div>
-            <p>Dale Byrd</p>
-            <a href="mailto:dale.byrd52@example.com">dale.byrd52@example.com</a>
+
+          <div class="members-container">
+            <img src="images/member-2.jpg" alt="Man with short brown hair">
+            <div>
+              <p>Dale Byrd</p>
+              <a href="mailto:dale.byrd52@example.com">dale.byrd52@example.com</a>
+            </div>
+            <p>10/15/20</p>
           </div>
-          <p>10/15/20</p>
-        </div>
-        <div class="members-container">
-          <img src="images/member-3.jpg" alt="Man with short brown hair">
-          <div>
-            <p>Dawn Wood</p>
-            <a href="mailto:dawn.wood16@example.com">dawn.wood16@example.com</a>
+
+          <div class="members-container">
+            <img src="images/member-3.jpg" alt="Man with short brown hair">
+            <div>
+              <p>Dawn Wood</p>
+              <a href="mailto:dawn.wood16@example.com">dawn.wood16@example.com</a>
+            </div>
+            <p>10/15/20</p>
           </div>
-          <p>10/15/20</p>
-        </div><div class="members-container">
-          <img src="images/member-4.jpg" alt="Man with short brown hair">
-          <div>
-            <p>Dan Oliver</p>
-            <a href="mailto:dan.oliver82@example.com">dan.oliver82@example.com</a>
+          
+          <div class="members-container">
+            <img src="images/member-4.jpg" alt="Man with short brown hair">
+            <div>
+              <p>Dan Oliver</p>
+              <a href="mailto:dan.oliver82@example.com">dan.oliver82@example.com</a>
+            </div>
+            <p>10/15/20</p>
           </div>
-          <p>10/15/20</p>
-        </div>
-      </section>
+        </section>
 
       <!-- recent activity -->
 
-      <section class="recent-activity"> 
-        <h3>Re</h3>
+        <section class="recent-activity"> 
+          <h3>Recent Activity</h3>
 
-        <div class="members-container">
-          <img src="images/member-1.jpg" alt="Woman with blonde hair">
-          <div>
-            <p>Victoria Chambers</p>
-            <a href="mailto:victoria.chambers80@example.com">victoria.chambers80@example.com</a>
+          <div class="members-container">
+            <img src="images/member-1.jpg" alt="Woman with blonde hair">
+            <p>Victoria Chambers commented on <span>WebApp's SEO Tip</span></p>
+            <p>4 hours ago</p>
           </div>
-          <p>10/15/20</p>
-        </div>
-        <div class="members-container">
-          <img src="images/member-2.jpg" alt="Man with short brown hair">
-          <div>
-            <p>Dale Byrd</p>
-            <a href="mailto:dale.byrd52@example.com">dale.byrd52@example.com</a>
+
+          <div class="members-container">
+            <img src="images/member-2.jpg" alt="Man with short brown hair">
+            <p>Dale Byrd liked the post <span></span>Facebook's changes for 2021</span></p>
+            <p>5 hours ago</p>
           </div>
-          <p>10/15/20</p>
-        </div>
-        <div class="members-container">
-          <img src="images/member-3.jpg" alt="Man with short brown hair">
-          <div>
-            <p>Dawn Wood</p>
-            <a href="mailto:dawn.wood16@example.com">dawn.wood16@example.com</a>
+
+          <div class="members-container">
+            <img src="images/member-3.jpg" alt="Man with short brown hair">
+            <p>Dawn Wood commented on <span></span>Facebook's Changes for 2021</span></p>
+            <p>5 hours ago</p>
           </div>
-          <p>10/15/20</p>
-        </div><div class="members-container">
-          <img src="images/member-4.jpg" alt="Man with short brown hair">
-          <div>
-            <p>Dan Oliver</p>
-            <a href="mailto:dan.oliver82@example.com">dan.oliver82@example.com</a>
+          
+          <div class="members-container">
+            <img src="images/member-4.jpg" alt="Man with short brown hair">
+            <p>Dan Oliver posted <span></span>WebApp's SEO Tips</span></p>
+            <p>1 day ago</p>
           </div>
-          <p>10/15/20</p>
+        </section>
+     </div>
+
+      <!-- message user -->
+      <section class="message">
+        <h3>Message User</h3>
+
+        <form class="widget-container" action="">
+          <input type="text" placeholder="Search for User" class="form-field" id="userField">
+          <textarea placeholder="Message for user" class="form-area" id="messageField"></textarea>
+          <button class="button-primary" id="send">Send</button>
+        </form>
+      </section>
+
+      <!-- settings -->
+      <section class="settings">
+        <h3>Settings</h3>
+
+        <!-- custom CSS toggle code -->
+        
+        <!-- custom CSS toggle code -->
+
+        <select class="form-field" id="timezone">
+          <option disabled selected>Select Timezone</option>
+          <option>Eastern</option>
+          <!-- more options -->
+        </select>
+        <div class="settings-button">
+          <button class="button-primary" id="save">Save</button>
+          <button class="button-disabled" id="cancel">Cancel</button>
         </div>
       </section>
 
