@@ -25,6 +25,42 @@ main {
   display: grid;
 }
 
+header {
+  background-color: aquamarine;
+  display: flex;
+}
+
+nav {
+  background-color: blueviolet;
+}
+
+img {
+  border-radius: 50%;
+  max-width: 50%;
+  height: 50%;
+}
+
+h3 {
+  text-transform: uppercase;
+}
+
+nav img,
+.bell-icon img {
+  border-radius: 100%;
+}
+
+main {
+  background-color: burlywood;
+}
+
+.members,
+.recent-activity {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
 @media (min-width: 768px) {
   .grid-container {
     grid-template-columns: 55px 1fr;
