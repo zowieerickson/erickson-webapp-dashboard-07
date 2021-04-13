@@ -2,6 +2,8 @@
   box-sizing: border-box;
 }
 
+/*  --------------------------------------- GRID --------------------------------------- */
+
 .grid-container {
   display: grid;
   grid-template-columns: 100%;
@@ -25,28 +27,70 @@ main {
   display: grid;
 }
 
+/*  --------------------------------------- STYLES --------------------------------------- */
+
 header {
+  width: 100%;
   background-color: aquamarine;
   display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  padding: 0;
 }
 
-nav {
-  background-color: blueviolet;
+header h1 {
+  display: block;
+  margin-right: auto;
+  padding-left: 10px;
 }
 
-img {
+header h3 {
+  margin-top: 30px;
+  font-size: 100%;
+}
+
+header h3 {
+  padding-right: 20px;
+  padding-left: 15px;
+}
+
+header * {
+  /* padding: 5px 10px 10px 10px; */
+}
+
+.bell-icon img {
+  width: 30px;
+  padding-top: 25px;
+}
+
+.vl {
+  margin: 15px 15px;
+  width: 1px; /* Line width */
+  background-color: black; /* Line color */
+  height: 65%; /* Override in-line if you want specific height. */
+}
+
+.profile-image {
   border-radius: 50%;
-  max-width: 50%;
-  height: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+header img {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.main-nav img {
+  width: 8%;
 }
 
 h3 {
   text-transform: uppercase;
 }
 
-nav img,
-.bell-icon img {
-  border-radius: 100%;
+nav {
+  background-color: blueviolet;
 }
 
 main {
