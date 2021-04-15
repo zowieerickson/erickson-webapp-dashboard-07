@@ -50,9 +50,6 @@ header h1 {
 
 header h3 {
   margin-top: 30px;
-}
-
-header h3 {
   padding-right: 20px;
   padding-left: 15px;
 }
@@ -69,7 +66,7 @@ header h3 {
   height: 65%; /* Override in-line if you want specific height. */
 }
 
-hr {
+.section-divider {
   width: 100%;
   margin-left: -27px;
   padding-right: 50px;
@@ -96,8 +93,9 @@ header img {
   margin: 15px 30px;
 }
 
-h3 {
+main h3 {
   text-transform: uppercase;
+  margin-right: auto;
 }
 
 main {
@@ -160,12 +158,80 @@ main {
   font-weight: 300;
 }
 
-.members,
-.recent-activity {
+/* <!------------------ Members/Social ROW -----------------> */
+
+.members-container {
+}
+
+.members-divider {
+  margin: 30px 0;
+}
+
+.members a {
+  text-decoration: none;
+  color: #443f7a;
+}
+
+.members-container {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
+}
+
+.members-container div * {
+  text-align: center;
+}
+
+.members-container img {
+  border-radius: 50%;
+}
+
+.members-container p {
+  margin: 3px;
+}
+
+.recent-activity span {
+  font-weight: 500;
+}
+
+/* <!-- message user --> */
+.widget-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field,
+.form-area {
+  background-color: rgb(240, 240, 240);
+  border-color: rgb(117, 116, 116);
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.settings-button {
+  display: grid;
+}
+
+.button-primary {
+  background-color: #7068c9;
+}
+
+.button-primary,
+.button-disabled {
+  border-radius: 5px;
+  height: 3em;
+  display: inline-block;
+}
+
+#cancel {
+  background-color: rgb(117, 116, 116);
+}
+
+button {
+  font-weight: 300;
+  letter-spacing: 1px;
+  font-size: large;
+  color: #fff;
 }
 
 @media (min-width: 768px) {
