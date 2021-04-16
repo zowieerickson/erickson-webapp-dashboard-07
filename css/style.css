@@ -297,7 +297,7 @@ button {
 
 @media (min-width: 768px) {
   .grid-container {
-    grid-template-columns: 55px 1fr;
+    grid-template-columns: 75px 1fr;
     grid-template-areas:
       "header header"
       "navigation main";
@@ -305,18 +305,30 @@ button {
   main {
     grid-template-columns: 50%;
   }
-  .traffic,
-  .social {
-    grid-column: 1 / span 2;
-  }
-  .daily,
-  .members,
-  .message {
+  .daily {
     grid-column: 1 / span 1;
   }
-  .mobile,
-  .recent-activity,
-  .settings {
+  .mobile {
     grid-column: 2 / span 1;
+  }
+  .social-stats,
+  .settings,
+  .social,
+  .traffic,
+  .alert,
+  .main-header,
+  .message {
+    grid-column: 1 / span 2;
+  }
+  #mobile-divider {
+    display: none;
+  }
+  .main-nav {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .main-nav img {
+    width: 43px;
+    margin: 15px;
   }
 }
