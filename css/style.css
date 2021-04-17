@@ -304,6 +304,7 @@ button {
   }
   main {
     grid-template-columns: 50%;
+    padding: 0 10px 20px 13px;
   }
   .daily {
     grid-column: 1 / span 1;
@@ -317,7 +318,8 @@ button {
   .traffic,
   .alert,
   .main-header,
-  .message {
+  .message,
+  .section-divider {
     grid-column: 1 / span 2;
   }
   #mobile-divider {
@@ -330,5 +332,80 @@ button {
   .main-nav img {
     width: 43px;
     margin: 15px;
+  }
+  .section-divider {
+    width: 100%;
+    margin-left: -13px;
+    padding-right: 48px;
+  }
+  .mobile {
+    border-left: 1px solid gray;
+    padding-left: 10px;
+    margin-bottom: -20px;
+  }
+  .daily,
+  .mobile {
+    margin-top: -10px;
+  }
+  .traffic-header {
+    display: flex;
+  }
+  .traffic-nav {
+    padding-left: 0;
+  }
+  .traffic-nav-link {
+    padding: 12px 15px;
+    width: 80px;
+  }
+  .social-box {
+    display: flex;
+  }
+  .social-container {
+    display: flex;
+    padding: 5px 10px;
+    margin: 0 6px 6px 0;
+  }
+  .social-image {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 15px;
+    width: 30%;
+  }
+  .social-icon {
+    margin-left: 5px;
+    margin-top: 2px;
+    width: 90%;
+  }
+  .social-text p {
+    font-size: 120%;
+  }
+  .social-text {
+    margin-left: 10px;
+    width: 100%;
+  }
+  .twitter {
+    margin-top: 8px;
+    /* margin-left: auto; */
+  }
+  .members-container {
+    display: block;
+  }
+  .members-container div {
+    display: inline-block;
+    background-color: burlywood;
+  }
+
+  .members-container {
+    height: 150px;
+  }
+
+  .members-container p:first-child,
+  .members-container a {
+    margin-bottom: 50px;
+  }
+  .members-container p:last-child {
+    color: red;
+    display: inline-block;
+    /* margin: 0 auto; */
   }
 }
