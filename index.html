@@ -13,8 +13,8 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/toggle-switch.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body class="grid-container">
 
@@ -194,7 +194,7 @@
           </div>
         </section>
 
-        <hr class="section-divider" id="desktop-divider">
+        <hr class="section-divider desktop-divider">
 
       <!-- recent activity -->
 
@@ -240,7 +240,7 @@
         </section>
 
      <hr class="section-divider">
-      <!-- message user -->
+      <!-- message user ----------------->
       <section class="message">
         <h3>Message User</h3>
 
@@ -251,27 +251,42 @@
         </form>
       </section>
 
-      <hr class="section-divider">
-      <!-- settings -->
+      <hr class="section-divider desktop-divider" >
+
+      <!-- settings -------------------->
+
       <section class="settings">
         <h3>Settings</h3>
-        <label class="switch-light switch-candy" onclick="">
+        <div class="testing-div">
+          <p>
+            Send Email Notifications
+          </p>
+        <label id="testing-switch" class="switch-light switch-ios" onclick="">
           <input type="checkbox">
-        
-          <strong>
-            Wireless
-          </strong>
-        
-          <span>
+          <span class="switch">
             <span>Off</span>
             <span>On</span>
             <a></a>
           </span>
         </label>
+      </div>
         <!-- custom CSS toggle code -->
         
-        <!-- custom CSS toggle code -->
-
+        <div class="testing-div">
+          <p>
+            Set Profile to Public
+          </p>
+        <label id="testing-switch" class="switch-light switch-ios" onclick="">
+          <input type="checkbox">
+          <span class="switch">
+            <span>Off</span>
+            <span>On</span>
+            <a></a>
+          </span>
+        </label>
+      </div>
+      <!-- custom CSS toggle code -->
+      <div class="timezone">
         <select class="form-field" id="timezone">
           <option disabled selected>Select Timezone</option>
           <option>Eastern Standard Time</option>
@@ -286,7 +301,8 @@
           <button class="button-primary" id="save">Save</button>
           <button class="button-disabled" id="cancel">Cancel</button>
         </div>
-      </section>
+      </div>
+    </section>
 
     </main>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

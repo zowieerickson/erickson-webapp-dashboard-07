@@ -263,7 +263,6 @@ main {
   border-color: rgb(117, 116, 116);
   margin-bottom: 15px;
   border-radius: 5px;
-  /* text-indent: 10px; */
 }
 
 .form-field {
@@ -281,6 +280,46 @@ textarea {
 
 ::placeholder {
   color: rgb(117, 116, 116);
+}
+
+.testing-div {
+  display: flex;
+}
+
+#testing-switch {
+  display: inline-block;
+  margin-left: auto;
+}
+
+.switch-ios.switch-light input:checked ~ span {
+  text-transform: uppercase;
+  border-color: lightgray;
+  border-color: #7068c9;
+  box-shadow: INSET 0 0 0 30px #7068c9;
+}
+
+.switch-ios.switch-light input:checked ~ span a {
+  border-color: lightgray;
+  border: 0.2em solid #d8d9db;
+}
+
+.switch-ios.switch-light input ~ span {
+  text-transform: uppercase;
+}
+
+.settings p {
+  display: inline-block;
+  margin-top: 0;
+  padding-bottom: 25px;
+}
+
+.switch {
+  margin-left: auto;
+}
+
+.switch-light {
+  display: inline-block;
+  width: 95px;
 }
 
 #timezone {
@@ -332,7 +371,9 @@ button {
     grid-template-columns: 50%;
     padding: 0 10px 20px 13px;
   }
-  .daily {
+  .daily,
+  .testing-div,
+  .settings {
     grid-column: 1 / span 1;
   }
   .mobile {
@@ -341,12 +382,12 @@ button {
   .social-stats,
   .recent-activity,
   .members,
-  .settings,
   .traffic,
   .alert,
   .main-header,
   .message,
-  .section-divider {
+  .section-divider,
+  .timezone {
     grid-column: 1 / span 2;
   }
   #mobile-divider {
@@ -468,13 +509,18 @@ button {
 }
 
 @media (min-width: 1024px) {
-  .members {
+  .members,
+  .message {
     grid-column: 1 / span 1;
+  }
+  .settings,
+  .timezone {
+    grid-column: 2 / span 1;
   }
   .recent-activity {
     grid-column: 2 / span 1;
   }
-  #desktop-divider {
+  .desktop-divider {
     display: none;
   }
   .widget-container-full {
@@ -503,5 +549,20 @@ button {
   }
   .members-divider {
     margin: 0;
+  }
+  .message {
+    padding-right: 12px;
+    border-right: 1px solid gray;
+  }
+  .message,
+  .settings {
+    margin-top: -10px;
+    padding-bottom: 10px;
+  }
+  .settings {
+    padding-left: 12px;
+  }
+  .timezone {
+    margin-top: 66px;
   }
 }
