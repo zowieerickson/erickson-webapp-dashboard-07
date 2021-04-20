@@ -47,6 +47,7 @@ let trafficData = {
 let trafficOptions = {
   backgroundColor: "rgba(112, 104, 201, .3)",
   tension: 0.3,
+  padding: 5000,
   fill: true,
   aspectRatio: 2.5,
   animation: {
@@ -134,7 +135,7 @@ let mobileOptions = {
     legend: {
       display: true,
       align: "center",
-      // position: "right",
+      position: "right",
     },
   },
 };

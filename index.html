@@ -14,6 +14,7 @@
     ></script>
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/toggle-switch.css" />
   </head>
   <body class="grid-container">
 
@@ -92,7 +93,7 @@
       <!-- mobile users -->
       <section class="mobile">
         <h3>Mobile Users</h3>
-        <div class="widget-container-quarter">
+        <div class="widget-container-half">
           <!-- element bar graph will attach to -->
           <canvas id="mobile-chart"></canvas>
         </div>
@@ -254,14 +255,31 @@
       <!-- settings -->
       <section class="settings">
         <h3>Settings</h3>
-
+        <label class="switch-light switch-candy" onclick="">
+          <input type="checkbox">
+        
+          <strong>
+            Wireless
+          </strong>
+        
+          <span>
+            <span>Off</span>
+            <span>On</span>
+            <a></a>
+          </span>
+        </label>
         <!-- custom CSS toggle code -->
         
         <!-- custom CSS toggle code -->
 
         <select class="form-field" id="timezone">
           <option disabled selected>Select Timezone</option>
-          <option>Eastern</option>
+          <option>Eastern Standard Time</option>
+          <option>Central Standard Time</option>
+          <option>Mountain Standard Time</option>
+          <option>Pacific Standard Time</option>
+          <option>Alaska Standard Time</option>
+          <option>Hawaii-Aleutian Standard Time</option>
           <!-- more options -->
         </select>
         <div class="settings-button">

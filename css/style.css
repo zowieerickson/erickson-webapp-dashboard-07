@@ -263,11 +263,12 @@ main {
   border-color: rgb(117, 116, 116);
   margin-bottom: 15px;
   border-radius: 5px;
-  text-indent: 10px;
+  /* text-indent: 10px; */
 }
 
 .form-field {
   height: 60px;
+  padding: 10px;
 }
 
 .form-area {
@@ -275,7 +276,7 @@ main {
 }
 
 textarea {
-  padding-top: 10px;
+  padding: 10px;
 }
 
 ::placeholder {
