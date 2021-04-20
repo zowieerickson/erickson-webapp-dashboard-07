@@ -57,7 +57,6 @@ h2 {
   margin-right: 0;
   padding-top: 20px;
   padding-right: 25px;
-  /* width: 28%; */
   height: 65px;
   border-right: 1px solid gray;
 }
@@ -79,6 +78,11 @@ header h3 {
 .bell-icon img {
   width: 30px;
   padding-top: 25px;
+  transition: transform 0.5s ease-out;
+}
+
+.bell-icon img:hover {
+  transform: rotate(50deg);
 }
 
 .vl {
@@ -127,10 +131,25 @@ main {
   padding: 0 25px 25px 25px;
 }
 
-.traffic-nav {
-  padding-left: 8px;
+.alert-banner {
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  background-color: #7068c9;
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  padding: 0 15px;
+  border-radius: 5px;
+}
+
+.alert-banner-close {
+  margin-left: auto;
+}
+
+.traffic-nav {
+  padding-left: 0;
+  display: flex;
+  justify-content: space=space-evenly;
 }
 
 .traffic-nav-link {
@@ -145,6 +164,11 @@ main {
   background-color: rgb(114, 197, 114);
   color: #fff;
   border-radius: 25px;
+}
+
+.widget-container-full,
+.widget-container-half {
+  width: 85vw;
 }
 
 .social-container {
@@ -314,8 +338,9 @@ button {
     grid-column: 2 / span 1;
   }
   .social-stats,
+  .recent-activity,
+  .members,
   .settings,
-  .social,
   .traffic,
   .alert,
   .main-header,
@@ -362,6 +387,15 @@ button {
     padding: 12px 15px;
     width: 80px;
   }
+
+  .widget-container-full {
+    width: 88vw;
+  }
+
+  .widget-container-half {
+    width: 45vw;
+  }
+
   .social-box {
     display: flex;
   }
@@ -432,7 +466,7 @@ button {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .members {
     grid-column: 1 / span 1;
   }
@@ -441,6 +475,13 @@ button {
   }
   #desktop-divider {
     display: none;
+  }
+  .widget-container-full {
+    width: 91vw;
+  }
+
+  .widget-container-half {
+    width: 45vw;
   }
   .members-container img {
     width: 75px;
