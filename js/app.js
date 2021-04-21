@@ -5,6 +5,14 @@ const mobileCanvas = document.querySelector("#mobile-chart");
 const sendButton = document.querySelector("#send");
 const messageField = document.querySelector("#messageField");
 const userField = document.querySelector("#userField");
+const bellIcon = document.querySelector("#bell");
+const badgeAlert = document.querySelector(".badge");
+console.log(badgeAlert);
+console.log(bellIcon);
+
+bellIcon.addEventListener("click", (e) => {
+  badgeAlert.style.display = "none";
+});
 
 sendButton.addEventListener("click", (e) => {
   e.preventDefault();
