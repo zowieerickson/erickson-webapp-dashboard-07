@@ -1,21 +1,44 @@
-const alert = document.querySelector("#alert");
+const alertCanvas = document.querySelector("#alert");
 const trafficCanvas = document.querySelector("#traffic-chart");
 const dailyCanvas = document.querySelector("#daily-chart");
 const mobileCanvas = document.querySelector("#mobile-chart");
+const sendButton = document.querySelector("#send");
+const messageField = document.querySelector("#messageField");
+const userField = document.querySelector("#userField");
 
-alert.innerHTML = `
+sendButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (messageField.value == "") {
+    alert("Message cannot be empty. 💬\nPlease add a message.");
+  } else if (userField.value == "") {
+    alert("User field cannot be empty. 👤\nFind a user.");
+  } else if (
+    userField.value.toUpperCase() !== "DAWN WOOD" &&
+    userField.value.toUpperCase() !== "DAN OLIVER" &&
+    userField.value.toUpperCase() != "DALE BYRD" &&
+    userField.value.toUpperCase() != "VICTORIA CHAMBERS"
+  ) {
+    alert("Cannot find that user.\nPlease try again.");
+  } else {
+    alert("Message has been sent. ✅");
+  }
+});
+
+alertCanvas.innerHTML = `
 <div class="alert-banner">
     <p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks to complete</p>
     <p class="alert-banner-close">x</p>
 </div>
 `;
 
-alert.addEventListener("click", (e) => {
+alertCanvas.addEventListener("click", (e) => {
   const element = e.target;
   if (element.classList.contains("alert-banner-close")) {
-    alert.style.display = "none";
+    alertCanvas.style.display = "none";
   }
 });
+
+// GRAPHS
 
 // LINE CHART ------------------------------------------
 
@@ -108,7 +131,7 @@ let dailyChart = new Chart(dailyCanvas, {
   options: dailyOptions,
 });
 
-// PIE CHART --------------------------------------------
+// DOUGHNUT CHART --------------------------------------------
 
 let mobileData = {
   labels: ["Desktop", "Tablet", "Phones"],
