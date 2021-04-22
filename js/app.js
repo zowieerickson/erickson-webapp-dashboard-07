@@ -1,17 +1,104 @@
+const bellIcon = document.querySelector("#bell");
 const alertCanvas = document.querySelector("#alert");
+const alertNotification2 = document.querySelector("#alert2");
+const alertNotification3 = document.querySelector("#alert3");
+const badgeAlert = document.querySelector(".badge");
 const trafficCanvas = document.querySelector("#traffic-chart");
 const dailyCanvas = document.querySelector("#daily-chart");
 const mobileCanvas = document.querySelector("#mobile-chart");
-const sendButton = document.querySelector("#send");
+const hourly = document.querySelector("#hourly");
+const daily = document.querySelector("#daily");
+const weekly = document.querySelector("#weekly");
+const monthly = document.querySelector("#monthly");
 const messageField = document.querySelector("#messageField");
 const userField = document.querySelector("#userField");
-const bellIcon = document.querySelector("#bell");
-const badgeAlert = document.querySelector(".badge");
-console.log(badgeAlert);
-console.log(bellIcon);
+const sendButton = document.querySelector("#send");
 
-bellIcon.addEventListener("click", (e) => {
+hourly.addEventListener("click", (e) => {
+  const element = e.target;
+  if (element.classList.contains("traffic-nav-link")) {
+    hourly.classList.add("active");
+    daily.classList.remove("active");
+    weekly.classList.remove("active");
+    monthly.classList.remove("active");
+  }
+});
+
+weekly.addEventListener("click", (e) => {
+  const element = e.target;
+  if (element.classList.contains("traffic-nav-link")) {
+    weekly.classList.add("active");
+    daily.classList.remove("active");
+    hourly.classList.remove("active");
+    monthly.classList.remove("active");
+  }
+});
+
+daily.addEventListener("click", (e) => {
+  const element = e.target;
+  if (element.classList.contains("traffic-nav-link")) {
+    daily.classList.add("active");
+    weekly.classList.remove("active");
+    hourly.classList.remove("active");
+    monthly.classList.remove("active");
+  }
+});
+
+monthly.addEventListener("click", (e) => {
+  const element = e.target;
+  if (element.classList.contains("traffic-nav-link")) {
+    monthly.classList.add("active");
+    daily.classList.remove("active");
+    hourly.classList.remove("active");
+    weekly.classList.remove("active");
+  }
+});
+
+function closeAlert(e) {
+  const element = e.target;
+  if (element.classList.contains("alert-banner-close")) {
+    alertCanvas.style.display = "none";
+  }
+}
+function closeAlert2(e) {
+  const element = e.target;
+  if (element.classList.contains("alert-banner-close")) {
+    alertNotification2.style.display = "none";
+  }
+}
+function closeAlert3(e) {
+  const element = e.target;
+  if (element.classList.contains("alert-banner-close")) {
+    alertNotification3.style.display = "none";
+  }
+}
+
+alertCanvas.addEventListener("click", closeAlert);
+alertNotification2.addEventListener("click", closeAlert2);
+alertNotification3.addEventListener("click", closeAlert3);
+
+alertCanvas.innerHTML = `
+<div class="alert-banner">
+    <p class="beware"><strong>Alert:</strong> You have <strong>6</strong> overdue tasks to complete</p>
+    <p class="alert-banner-close">x</p>
+</div>
+`;
+
+bellIcon.addEventListener("click", () => {
   badgeAlert.style.display = "none";
+  alertNotification2.innerHTML = `
+  <div class="alert-banner">
+      <p><strong>Zowie Erickson</strong> has sent you a friend request.</p>
+      <p class="alert-banner-close">x</p>
+  </div>
+  `;
+
+  alertNotification3.innerHTML = `
+  <div class="alert-banner">
+      <p><strong>History 101</strong> exam results have been released.</p>
+      <p class="alert-banner-close">x</p>
+  </div>
+  `;
 });
 
 sendButton.addEventListener("click", (e) => {
@@ -29,20 +116,6 @@ sendButton.addEventListener("click", (e) => {
     alert("Cannot find that user.\nPlease try again.");
   } else {
     alert("Message has been sent. ✅");
-  }
-});
-
-alertCanvas.innerHTML = `
-<div class="alert-banner">
-    <p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks to complete</p>
-    <p class="alert-banner-close">x</p>
-</div>
-`;
-
-alertCanvas.addEventListener("click", (e) => {
-  const element = e.target;
-  if (element.classList.contains("alert-banner-close")) {
-    alertCanvas.style.display = "none";
   }
 });
 

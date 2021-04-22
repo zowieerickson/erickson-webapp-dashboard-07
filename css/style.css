@@ -153,7 +153,14 @@ main {
   padding: 0 25px 25px 25px;
 }
 
+.beware {
+  color: red;
+  font-weight: bold;
+  /* box-shadow: inset 2px 2px 2px 2px; */
+}
+
 .alert-banner {
+  margin-bottom: 10px;
   width: 100%;
   color: #fff;
   text-align: center;
@@ -182,7 +189,7 @@ main {
   text-align: center;
 }
 
-.traffic-nav-link:hover {
+.active {
   background-color: rgb(114, 197, 114);
   color: #fff;
   border-radius: 25px;
@@ -555,12 +562,12 @@ button {
   .settings {
     grid-column-start: 2;
     grid-column-end: 2;
-    grid-row-start: 11;
+    grid-row-start: 13;
   }
   .timezone {
     grid-column-start: 2;
     grid-column-end: 2;
-    grid-row-start: 11;
+    grid-row-start: 13;
   }
   .recent-activity {
     grid-column: 2 / span 1;
