@@ -2,6 +2,7 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
+  scroll-behavior: smooth;
 }
 
 /*  --------------------------------------- GRID --------------------------------------- */
@@ -39,6 +40,17 @@ header {
   justify-content: space-around;
   margin: 0 auto;
   padding: 0;
+  position: fixed;
+  z-index: 2;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+  background-color: #443f7a;
+  position: relative;
+  width: 100%;
+  top: 79px;
 }
 
 header h1 {
@@ -46,9 +58,16 @@ header h1 {
   margin-right: auto;
   padding-left: 10px;
   font-weight: 300;
+  text-decoration: none;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
 }
 
 .main-header {
+  padding-top: 79px;
   display: flex;
 }
 
@@ -129,12 +148,6 @@ header h3 {
 
 header img {
   margin: auto 0;
-}
-
-.main-nav {
-  display: flex;
-  justify-content: center;
-  background-color: #443f7a;
 }
 
 .main-nav img {
@@ -249,11 +262,11 @@ main {
 
 /* <!------------------ Members/Social ROW -----------------> */
 
-.members-divider {
+#members-divider {
   margin: 30px 0;
 }
 
-.members a {
+#members a {
   text-decoration: none;
   color: #443f7a;
 }
@@ -297,6 +310,7 @@ main {
 .form-field {
   height: 60px;
   padding: 10px;
+  width: 100%;
 }
 
 .form-area {
@@ -336,7 +350,7 @@ textarea {
   text-transform: uppercase;
 }
 
-.settings p {
+#settings p {
   display: inline-block;
   margin-top: 0;
   padding-bottom: 25px;
@@ -402,7 +416,7 @@ button {
   }
   .daily,
   .testing-div,
-  .settings {
+  #settings {
     grid-column: 1 / span 1;
   }
   .mobile {
@@ -410,8 +424,8 @@ button {
   }
   .social-stats,
   .recent-activity,
-  .members,
-  .traffic,
+  #members,
+  #traffic,
   .alert,
   .main-header,
   .message,
@@ -422,6 +436,32 @@ button {
   #mobile-divider {
     display: none;
   }
+
+  .home-icon {
+    position: fixed;
+    top: 80px;
+  }
+
+  .bar-icon {
+    position: fixed;
+    top: 140px;
+  }
+
+  .members-icon {
+    position: fixed;
+    top: 200px;
+  }
+
+  .gear-icon {
+    position: fixed;
+    top: 260px;
+  }
+
+  /* .main-nav {
+    position: fixed;
+    top: 79px;
+    height: 100%;
+  } */
 
   .headline-empty {
     margin-right: -10px;
@@ -541,7 +581,7 @@ button {
     justify-content: flex-start;
   }
 
-  .settings p {
+  #settings p {
     padding-top: 5px;
     margin-bottom: 15px;
   }
@@ -555,11 +595,16 @@ button {
 }
 
 @media (min-width: 1024px) {
-  .members,
+  #members,
   .message {
     grid-column: 1 / span 1;
   }
-  .settings {
+  .message {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 13;
+  }
+  #settings {
     grid-column-start: 2;
     grid-column-end: 2;
     grid-row-start: 13;
@@ -585,15 +630,15 @@ button {
   .members-container img {
     width: 75px;
   }
-  .members {
+  #members {
     border-right: 1px solid gray;
   }
   .recent-activity,
-  .members {
+  #members {
     margin-top: -10px;
     margin-bottom: -20px;
   }
-  .members {
+  #members {
     padding-right: 12px;
   }
   .recent-activity {
@@ -607,11 +652,11 @@ button {
     border-right: 1px solid gray;
   }
   .message,
-  .settings {
+  #settings {
     margin-top: -10px;
     padding-bottom: 10px;
   }
-  .settings {
+  #settings {
     padding-left: 12px;
     margin-bottom: 40px;
   }
@@ -621,7 +666,7 @@ button {
     justify-content: flex-start;
   }
 
-  .settings p {
+  #settings p {
     padding-top: 5px;
     margin-bottom: 15px;
   }

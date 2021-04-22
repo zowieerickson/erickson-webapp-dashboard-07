@@ -154,9 +154,9 @@ let trafficOptions = {
   padding: 5000,
   fill: true,
   aspectRatio: 2.5,
-  animation: {
-    duration: 0,
-  },
+  // animation: {
+  //   duration: 0,
+  // },
   scales: {
     y: {
       beginAtZero: true,
@@ -174,6 +174,62 @@ let trafficChart = new Chart(trafficCanvas, {
   data: trafficData,
   options: trafficOptions,
 });
+
+function updateChartHourly() {
+  trafficChart.data.datasets[0].data = [5, 10, 14, 4, 5, 2, 0, 12, 4, 10, 19];
+  trafficChart.update();
+}
+
+function updateChartDaily() {
+  trafficChart.data.datasets[0].data = [
+    100,
+    50,
+    70,
+    120,
+    85,
+    65,
+    70,
+    35,
+    80,
+    110,
+    90,
+  ];
+  trafficChart.update();
+}
+
+function updateChartWeekly() {
+  trafficChart.data.datasets[0].data = [
+    300,
+    220,
+    130,
+    200,
+    150,
+    250,
+    375,
+    297,
+    255,
+    370,
+    400,
+  ];
+  trafficChart.update();
+}
+
+function updateChartMonthly() {
+  trafficChart.data.datasets[0].data = [
+    750,
+    1250,
+    1000,
+    2000,
+    1500,
+    1750,
+    1250,
+    1850,
+    2250,
+    1500,
+    2500,
+  ];
+  trafficChart.update();
+}
 
 // BAR CHART --------------------------------------------
 

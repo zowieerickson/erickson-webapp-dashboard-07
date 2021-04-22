@@ -16,14 +16,16 @@
     <link rel="stylesheet" href="css/toggle-switch.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body class="grid-container">
+  <body id="top" class="grid-container">
 
     <!------------------ Header ----------------->
-    <header>
-      <h1><span class="web">Web</span>App&#8482</h1>
+    <header id="header-primary">
+      <h1><a href="#top"><span id="web-app" class="web">Web</span>App&#8482</a></h1>
       <div class="bell-icon">
-        <img id="bell" src="svgs/bell.svg" alt="bell">
-        <span class="badge">2</span>
+        <a href="#top">
+          <img id="bell" src="svgs/bell.svg" alt="bell">
+          <span class="badge">2</span>
+      </a>
       </div>
       <div class="vl"></div>
       <img class="profile-image" src="images/member-1.jpg" alt="Woman with blonde hair">
@@ -32,17 +34,17 @@
 
     <!------------------ Nav ----------------->
     <nav class="main-nav">
-      <a href="#">
-        <img src="svgs/home.svg" alt="home icon">
+      <a href="#header-primary">
+        <img class="home-icon" src="svgs/home.svg" alt="home icon">
       </a>
-      <a href="#">
-        <img class="bar" src="svgs/bar-chart.svg" alt="bar chart icon">
+      <a href="#top">
+        <img class="bar-icon" src="svgs/bar-chart.svg" alt="bar chart icon">
       </a>
-      <a href="#">
-        <img src="svgs/members.svg" alt="members icon">
+      <a href="#members">
+        <img class="members-icon" src="svgs/members.svg" alt="members icon">
       </a>
-      <a href="#">
-        <img src="svgs/settings.svg" alt="gear icon">
+      <a href="#settings">
+        <img class="gear-icon" src="svgs/settings.svg" alt="gear icon">
       </a>
     </nav>
 
@@ -68,14 +70,14 @@
       </div>
 
       <!-- traffic -->
-      <section class="traffic">
+      <section id="traffic">
         <div class="traffic-header">
           <h3>Traffic</h3>
           <ul class="traffic-nav">
-            <li class="traffic-nav-link" id="hourly">Hourly</li>
-            <li class="traffic-nav-link" id="daily">Daily</li>
-            <li class="traffic-nav-link" id="weekly">Weekly</li>
-            <li class="traffic-nav-link active" id="monthly">Monthly</li>
+            <li class="traffic-nav-link" onclick="updateChartHourly()" id="hourly">Hourly</li>
+            <li class="traffic-nav-link" onclick="updateChartDaily()" id="daily">Daily</li>
+            <li class="traffic-nav-link" onclick="updateChartWeekly()" id="weekly">Weekly</li>
+            <li class="traffic-nav-link active" onclick="updateChartMonthly()" id="monthly">Monthly</li>
           </ul>
         </div>
         <div class="widget-container-full">
@@ -155,7 +157,7 @@
       <!------------------ Members/Social ROW ----------------->
 
         <!-- new member -->
-        <section class="members"> 
+        <section id="members"> 
           <h3>New Members</h3>
 
           <div class="members-container">
@@ -252,7 +254,9 @@
         <h3>Message User</h3>
 
         <form class="widget-container" action="">
-          <input type="text" placeholder="Search for User" class="form-field" id="userField">
+          <div>
+            <input type="text" placeholder="Search for User" class="form-field" id="userField">
+          </div>
           <textarea placeholder="Message for User" class="form-area" id="messageField"></textarea>
           <button class="button-primary" id="send">Send</button>
         </form>
@@ -262,7 +266,7 @@
 
       <!-- settings -------------------->
 
-      <section class="settings">
+      <section id="settings">
         <h3>Settings</h3>
         <div class="testing-div">
           <p>
