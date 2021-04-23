@@ -40,17 +40,17 @@ header {
   justify-content: space-around;
   margin: 0 auto;
   padding: 0;
-  position: fixed;
-  z-index: 2;
+  /* position: fixed; */
+  /* z-index: 2; */
 }
 
 .main-nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   background-color: #443f7a;
-  position: relative;
   width: 100%;
-  top: 79px;
+  /* position: relative;
+  top: 79px; */
 }
 
 header h1 {
@@ -58,6 +58,7 @@ header h1 {
   margin-right: auto;
   padding-left: 10px;
   font-weight: 300;
+  font-size: 27px;
   text-decoration: none;
 }
 
@@ -67,7 +68,7 @@ header a {
 }
 
 .main-header {
-  padding-top: 79px;
+  /* padding-top: 79px; */
   display: flex;
 }
 
@@ -89,13 +90,15 @@ h2 {
 }
 
 header h3 {
-  margin-top: 30px;
-  padding-right: 20px;
-  padding-left: 15px;
+  margin-top: 25px;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-weight: 100;
+  font-size: medium;
 }
 
 .bell-icon img {
-  width: 30px;
+  width: 28px;
   padding-top: 25px;
   transition: transform 0.5s ease-out;
 }
@@ -103,9 +106,9 @@ header h3 {
 .badge {
   position: absolute;
   top: 15px;
-  right: 235px;
+  right: 190px;
   border-radius: 50%;
-  padding: 4px 8px;
+  padding: 4px 4px;
   background-color: rgb(114, 197, 114);
 }
 
@@ -127,10 +130,10 @@ header h3 {
 }
 
 .vl {
-  margin: 15px 15px 15px 35px;
+  margin: 15px 12px 5px 12px;
   width: 1px;
-  background-color: #fff;
-  height: 48px;
+  background-color: rgba(255, 255, 255, 0.4);
+  height: 40px;
   z-index: 999;
 }
 
@@ -152,8 +155,8 @@ header img {
 }
 
 .main-nav img {
-  width: 43px;
-  margin: 15px 30px;
+  width: 40px;
+  margin: 15px 0;
 }
 
 main h3 {
@@ -168,8 +171,8 @@ main {
 }
 
 .beware {
-  color: red;
-  font-weight: bold;
+  color: #fff;
+  font-weight: 300;
 }
 
 .alert-banner {
@@ -191,7 +194,7 @@ main {
 .traffic-nav {
   padding-left: 0;
   display: flex;
-  justify-content: space=space-evenly;
+  justify-content: space-evenly;
 }
 
 .traffic-nav-link {
@@ -216,7 +219,7 @@ main {
 .social-container {
   background-color: rgb(240, 240, 240);
   margin-bottom: 10px;
-  padding: 0 20px;
+  padding: 10px 20px;
   border-radius: 1em;
   border: 1px solid rgb(117, 116, 116);
 }
@@ -224,8 +227,8 @@ main {
 .social-image {
   background-color: #7068c9;
   border-radius: 50%;
-  padding: 20px;
-  margin-bottom: 20px;
+  padding: 18px;
+  margin-bottom: 10px;
   display: inline-block;
 }
 
@@ -250,7 +253,8 @@ main {
 .social-name {
   color: #7068c9;
   font-size: 25px;
-  margin-top: 10;
+  padding-top: 10px;
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -286,7 +290,11 @@ main {
 }
 
 .members-container p {
-  margin: 3px;
+  margin: 3px 0;
+}
+
+.arrow-right {
+  visibility: hidden;
 }
 
 .recent-activity span {
@@ -434,6 +442,12 @@ button {
   letter-spacing: 1px;
   font-size: large;
   color: #fff;
+  transition: 0.1s all;
+}
+
+button:active {
+  transform: scale(0.98);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
 /* <!------------------ Media Queries -----------------> */
@@ -592,14 +606,25 @@ button {
     height: 150px;
   }
 
-  .members-container p:last-child {
+  .members-container .members-date {
     margin-left: auto;
   }
 
   .members-container p:first-child,
-  .recent-activity p:last-child {
+  .activity-time {
     text-align: left;
     margin: 0;
+  }
+  .recent-activity .activity-time {
+    margin-right: auto;
+    margin-left: 0;
+  }
+
+  .arrow-right {
+    visibility: visible;
+    margin-left: auto;
+    font-size: 23px;
+    font-weight: 100;
   }
   .members-container img {
     width: 100px;
