@@ -65,7 +65,7 @@ cancelButton.addEventListener("click", (e) => {
   localStorage.removeItem("public-checkbox");
 });
 
-const userNames = ["Victoria Cambers", "Dale Byrd", "Dawn Wood", "Dan Oliver"];
+const userNames = ["Victoria Chambers", "Dale Byrd", "Dawn Wood", "Dan Oliver"];
 
 hourly.addEventListener("click", (e) => {
   const element = e.target;
