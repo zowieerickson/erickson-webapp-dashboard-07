@@ -255,7 +255,7 @@
 
         <form class="widget-container" action="">
           <div class="autocomplete">
-            <input type="text" placeholder="Search for User" class="form-field" id="userField">
+            <input type="text" placeholder="Search for User" class="form-field" id="userField" autocomplete="off">
           </div>
           <textarea placeholder="Message for User" class="form-area" id="messageField"></textarea>
           <button class="button-primary" id="send">Send</button>
@@ -273,7 +273,7 @@
             Send Email Notifications
           </p>
         <label id="testing-switch" class="switch-light switch-ios" onclick="">
-          <input type="checkbox">
+          <input id="email-checkbox" store="checkbox1" type="checkbox">
           <span class="switch">
             <span>Off</span>
             <span>On</span>
@@ -288,7 +288,7 @@
             Set Profile to Public
           </p>
         <label id="testing-switch" class="switch-light switch-ios" onclick="">
-          <input type="checkbox">
+          <input id="public-checkbox" store="checkbox2" type="checkbox">
           <span class="switch">
             <span>Off</span>
             <span>On</span>
@@ -310,7 +310,7 @@
           <!-- more options -->
         </select>
         <div class="settings-button">
-          <button class="button-primary" id="save">Save</button>
+          <button class="button-primary" id="save" onclick="save()">Save</button>
           <button class="button-disabled" id="cancel">Cancel</button>
         </div>
       </div>

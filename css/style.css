@@ -128,9 +128,10 @@ header h3 {
 
 .vl {
   margin: 15px 15px 15px 35px;
-  width: 1px; /* Line width */
-  background-color: #fff; /* Line color */
-  height: 65%; /* Override in-line if you want specific height. */
+  width: 1px;
+  background-color: #fff;
+  height: 48px;
+  z-index: 999;
 }
 
 .section-divider {
@@ -169,7 +170,6 @@ main {
 .beware {
   color: red;
   font-weight: bold;
-  /* box-shadow: inset 2px 2px 2px 2px; */
 }
 
 .alert-banner {
@@ -335,6 +335,11 @@ main {
   cursor: pointer;
   background-color: #fff;
   border-bottom: 1px solid #d4d4d4;
+}
+
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: #e9e9e9;
 }
 
 .autocomplete-active {

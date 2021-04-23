@@ -12,7 +12,58 @@ const weekly = document.querySelector("#weekly");
 const monthly = document.querySelector("#monthly");
 const messageField = document.querySelector("#messageField");
 const userField = document.querySelector("#userField");
+const timezone = document.querySelector("#timezone");
 const sendButton = document.querySelector("#send");
+const emailCheckbox = document.querySelector("#email-checkbox");
+const publicCheckbox = document.querySelector("#public-checkbox");
+let checkboxes = document.querySelectorAll("input[type='checkbox']");
+const saveButton = document.querySelector("#save");
+const cancelButton = document.querySelector("#cancel");
+
+// USING LOCAL STORAGE
+
+// save cehckbox
+function save() {
+  localStorage.setItem("email-checkbox", emailCheckbox.checked);
+  localStorage.setItem("public-checkbox", publicCheckbox.checked);
+}
+
+// loading
+const checked1 = JSON.parse(localStorage.getItem("email-checkbox"));
+const checked2 = JSON.parse(localStorage.getItem("public-checkbox"));
+emailCheckbox.checked = checked1;
+publicCheckbox.checked = checked2;
+
+saveButton.addEventListener("click", (e) => {
+  timezone.onchange = function () {
+    lastSelected = timezone.options[timezone.selectedIndex].value;
+    console.log(lastSelected);
+    localStorage.setItem("timezone", lastSelected);
+  };
+});
+
+// timezone localstorage
+const timezoneOption = timezone.options[timezone.selectedIndex];
+let lastSelected = localStorage.getItem("timezone");
+if (lastSelected) {
+  timezone.value = lastSelected;
+}
+
+// save timezone localstorage
+timezone.onchange = function () {
+  lastSelected = timezone.options[timezone.selectedIndex].value;
+  console.log(lastSelected);
+  saveButton.addEventListener("click", (e) => {
+    localStorage.setItem("timezone", lastSelected);
+  });
+};
+
+// remove localstorage
+cancelButton.addEventListener("click", (e) => {
+  localStorage.removeItem("timezone");
+  localStorage.removeItem("email-checkbox");
+  localStorage.removeItem("public-checkbox");
+});
 
 const userNames = ["Victoria Cambers", "Dale Byrd", "Dawn Wood", "Dan Oliver"];
 
@@ -117,6 +168,8 @@ sendButton.addEventListener("click", (e) => {
   ) {
     alert("Cannot find that user.\nPlease try again.");
   } else {
+    userField.value = "";
+    messageField.value = "";
     alert("Message has been sent. ✅");
   }
 });
@@ -358,7 +411,7 @@ function autocomplete(inp, arr) {
   });
   /*execute a function presses a key on the keyboard:*/
   inp.addEventListener("keydown", function (e) {
-    const x = document.getElementById(this.id + "autocomplete-list");
+    let x = document.getElementById(this.id + "autocomplete-list");
     if (x) x = x.getElementsByTagName("div");
     if (e.keyCode == 40) {
       /*If the arrow DOWN key is pressed,
