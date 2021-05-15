@@ -188,6 +188,7 @@ main {
 
 .alert-banner-close {
   margin-left: auto;
+  cursor: pointer;
 }
 
 .traffic-nav {
@@ -202,6 +203,7 @@ main {
   width: calc(20% + 2px);
   padding-top: 12px;
   text-align: center;
+  cursor: pointer;
 }
 
 .active {
@@ -392,6 +394,10 @@ textarea {
   text-transform: uppercase;
 }
 
+.switch-ios.switch-light a:active {
+  display: none;
+}
+
 #settings p {
   display: inline-block;
   margin-top: 0;
@@ -400,11 +406,14 @@ textarea {
 
 .switch {
   margin-left: auto;
+  cursor: pointer;
 }
 
 .switch-light {
   display: inline-block;
   width: 95px;
+  outline-style: none;
+  outline-width: 0;
 }
 
 #timezone {
@@ -442,6 +451,7 @@ button {
   font-size: large;
   color: #fff;
   transition: 0.1s all;
+  cursor: pointer;
 }
 
 button:active {
@@ -485,25 +495,9 @@ button:active {
     display: none;
   }
 
-  .home-icon {
-    position: fixed;
-    top: 80px;
-  }
-
-  .bar-icon {
-    position: fixed;
-    top: 140px;
-  }
-
-  .members-icon {
-    position: fixed;
-    top: 200px;
-  }
-
-  .gear-icon {
-    position: fixed;
-    top: 260px;
-  }
+  /* .icon {
+   
+ } */
 
   /* .main-nav {
     position: fixed;
